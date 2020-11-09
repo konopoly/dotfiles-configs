@@ -1,2 +1,2 @@
 # dotfiles-configs
-My personal(super awesome) config files and dot files.
+My personal configuration and dot files
