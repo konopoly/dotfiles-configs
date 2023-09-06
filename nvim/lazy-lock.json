@@ -1,0 +1,13 @@
+{
+  "bufferline.nvim": { "branch": "main", "commit": "d24378edc14a675c820a303b4512af3bbc5761e9" },
+  "fzf-lua": { "branch": "main", "commit": "877ea6a3887877dfe47cdda501ec964c1e25b119" },
+  "lazy.nvim": { "branch": "main", "commit": "3ad55ae678876516156cca2f361c51f7952a924b" },
+  "neodev.nvim": { "branch": "main", "commit": "dcd34653b0f1d3e7ea9aeb3e37dc7c8da445c4fe" },
+  "nerdtree": { "branch": "master", "commit": "32168889bdbc1e7d1d313e3e41c1cc794b38eac5" },
+  "nvim-autopairs": { "branch": "master", "commit": "35493556b895f54c129918aca43ae9a63af42a1f" },
+  "nvim-web-devicons": { "branch": "master", "commit": "bc11ee2498de2310de5776477dd9dce65d03b464" },
+  "onedark.nvim": { "branch": "master", "commit": "dac8c39812dae025255c9069a260e1f69d967927" },
+  "vim-javascript": { "branch": "master", "commit": "c470ce1399a544fe587eab950f571c83cccfbbdc" },
+  "vim-jsx": { "branch": "master", "commit": "8879e0d9c5ba0e04ecbede1c89f63b7a0efa24af" },
+  "which-key.nvim": { "branch": "main", "commit": "7ccf476ebe0445a741b64e36c78a682c1c6118b7" }
+}
