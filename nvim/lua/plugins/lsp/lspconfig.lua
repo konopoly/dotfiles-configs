@@ -16,7 +16,7 @@ return {
       opts.buffer = bufnr
 
       opts.desc = "Go to declaration"
-      keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
+      keymap.set("n", "gD", "<cmd>FzfLua lsp_references<CR>", opts) -- go to declaration
 
       opts.desc = "Show documentation for what is under cursor"
       keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor

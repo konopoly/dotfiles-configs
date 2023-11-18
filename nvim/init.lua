@@ -1,4 +1,3 @@
--- vim customizations
 vim.wo.relativenumber = true
 
 vim.opt.tabstop = 2
