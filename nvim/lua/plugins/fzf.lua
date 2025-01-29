@@ -9,6 +9,7 @@ vim.cmd([[command! -nargs=* GrepResume Fzf buffers <args>]])
 return {
   "ibhagwan/fzf-lua",
   dependencies = { "nvim-tree/nvim-web-devicons" },
+  grep = { rg_opts = "--hidden --column --line-number --no-heading --color=always --smart-case --glob '!.git/'" },
   config = function()
     require("fzf-lua").setup({})
   end

@@ -5,11 +5,12 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-if [ "$TMUX" = "" ]; then tmux; fi
-
 export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
 
 alias vi='nvim'
 alias vim='nvim'
 
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  session_name="terminal-$(date +%s)"  # Generate a unique session name
+  tmux new -s "$session_name"
+fi
