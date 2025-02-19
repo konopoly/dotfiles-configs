@@ -9,5 +9,8 @@ vim.g.mapleader = ' '
 
 vim.g.skip_ts_context_commentstring_module = true
 
+vim.opt.showtabline = 0  -- disable global tabline
+vim.opt.laststatus = 3   -- enable global statusline
+
 -- load lazy.nvim
 require("config.lazy")
