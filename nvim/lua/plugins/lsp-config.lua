@@ -10,14 +10,33 @@ return {
       require("mason").setup()
       require("mason-lspconfig").setup()
 
-      -- Set up LSP servers
-      local lspconfig = require("lspconfig")
+      -- Set up LSP servers using the new vim.lsp.config API
+      -- Configure Pyright for Python
+      vim.lsp.config.pyright = {
+        cmd = { 'pyright-langserver', '--stdio' },
+        filetypes = { 'python' },
+        root_markers = { 'pyproject.toml', 'setup.py', 'setup.cfg', 'requirements.txt', 'Pipfile', '.git' },
+        settings = {
+          python = {
+            analysis = {
+              autoSearchPaths = true,
+              useLibraryCodeForTypes = true,
+              diagnosticMode = 'workspace',
+            },
+          },
+        },
+      }
 
-      -- Example: Set up LSP for Python
-      lspconfig.pyright.setup({})
+      -- Configure ts_ls for TypeScript/JavaScript
+      vim.lsp.config.ts_ls = {
+        cmd = { 'typescript-language-server', '--stdio' },
+        filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
+        root_markers = { 'package.json', 'tsconfig.json', 'jsconfig.json', '.git' },
+      }
 
-      -- Example: Set up LSP for TypeScript/JavaScript
-      lspconfig.ts_ls.setup({}) -- Use ts_ls instead of tsserver
+      -- Enable the LSP servers
+      vim.lsp.enable('pyright')
+      vim.lsp.enable('ts_ls')
 
       -- Add more LSP servers as needed
 
